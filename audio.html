@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="icon" href="images/favicon.jpeg" type="image/jpeg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аудиофайл</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #2fa14c;
+            padding: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .content {
+            flex: 3;
+            margin-right: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #e4e4e4;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Аудиофайл</h1>
+    </header>
+
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="photos.html">Фотографии</a>
+    <a href="audio.html">Аудиофайл</a>
+    <a href="video.html">Видеофайл</a>
+</nav>
+<div class="container">
+    <div class="content">
+        <h2>Добро пожаловать на страницу "Аудиофайл"</h2>
+        <p>Здесь помимо 1 аудиофайла ничего нет.</p>
+    </div>
+    <p> 
+        <audio src="music/roa-music-walk-around(chosic.com).mp3" controls autoplay></audio>
+    </p>
+    <div class="sidebar">
+        <h3>Боковая панель</h3>
+        <h4><a href="https://mail.ru">Новости</a></h4>
+        <h4><a href="https://drive.google.com/drive/folders/1nb7TEhwMG-3di4vyDySXkxFYpSXCLVOW">Моя рабочая папка</a></h4>
+        <h4><a href="https://colab.research.google.com/drive/1LhctuWIFjELbyMzHHdSccepyzP2jPfpv">Отчет практической работы</a></h4>
+        <p>Текущее время: <time id="currentTime"></time></p>
+        <script>
+            var timeElement = document.getElementById('currentTime');
+            setInterval(function () {
+                var currentTime = new Date();
+                timeElement.textContent = currentTime.toLocaleTimeString();
+             }, 1000);
+        </script>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Горбенко Артемий</p>
+</footer>
+
+</body>
+</html>
